@@ -18,9 +18,9 @@ from torch.autograd import Variable
 from load_w2v import load_pretrained_embedding
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--data_dir', type=str, default='dataset/Restaurants')
-parser.add_argument('--vocab_dir', type=str, default='dataset/Restaurants')
-parser.add_argument('--glove_dir', type=str, default='dataset/glove')
+parser.add_argument('--data_dir', type=str, default='stage1_1/Covolution_over_Dependency_Tree_EMNLP2019/dataset/Restaurants')
+parser.add_argument('--vocab_dir', type=str, default='stage1_1/Covolution_over_Dependency_Tree_EMNLP2019/dataset/Restaurants')
+parser.add_argument('--glove_dir', type=str, default='stage1_1/Covolution_over_Dependency_Tree_EMNLP2019/dataset/glove')
 parser.add_argument('--emb_dim', type=int, default=300, help='Word embedding dimension.')
 parser.add_argument('--post_dim', type=int, default=30, help='Position embedding dimension.')
 parser.add_argument('--pos_dim', type=int, default=30, help='Pos embedding dimension.')
@@ -45,7 +45,7 @@ parser.add_argument('--num_epoch', type=int, default=100, help='Number of total 
 parser.add_argument('--batch_size', type=int, default=32, help='Training batch size.')
 parser.add_argument('--log_step', type=int, default=20, help='Print log every k steps.')
 parser.add_argument('--log', type=str, default='logs.txt', help='Write training log to file.')
-parser.add_argument('--save_dir', type=str, default='./saved_models', help='Root dir for saving models.')
+parser.add_argument('--save_dir', type=str, default='stage1_1/Covolution_over_Dependency_Tree_EMNLP2019/saved_models', help='Root dir for saving models.')
 parser.add_argument('--seed', type=int, default=0)
 args = parser.parse_args()
 
