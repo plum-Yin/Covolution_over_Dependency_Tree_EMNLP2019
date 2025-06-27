@@ -54,7 +54,7 @@ class GCNTrainer(object):
         logits, gcn_outputs = self.model(inputs)
         loss = F.cross_entropy(logits, label, reduction='mean')
         corrects = (torch.max(logits, 1)[1].view(label.size()).data == label.data).sum()
-        acc = 100.0 * np.float(corrects) / label.size()[0]
+        acc = 100.0 * np.float64(corrects) / label.size()[0]
         
         # backward
         loss.backward()
