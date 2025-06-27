@@ -239,4 +239,3 @@ if __name__ == '__main__':
             log.append(msg)
     with open('./datasets/lastest.log', 'w', encoding='utf-8') as f:
         f.write('\n'.join(log))
-             
