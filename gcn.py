@@ -11,7 +11,7 @@ class GCNClassifier(nn.Module):
         in_dim = args.hidden_dim
         self.args = args
         self.gcn_model = GCNAbsaModel(args, emb_matrix=emb_matrix)
-        self.classifier = nn.Linear(in_dim, args.num_class)
+        self.classifier = nn.Linear(in_dim, args.num_class) # in:50, out:3
 
     def forward(self, inputs):
         outputs = self.gcn_model(inputs)
